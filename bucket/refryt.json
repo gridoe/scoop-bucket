@@ -1,0 +1,39 @@
+{
+    "version": "0.1.13",
+    "description": "Lightweight YouTube Music client",
+    "homepage": "https://github.com/gridoe/refryt",
+    "license": "GPL-3.0-or-later",
+    "notes": "Refryt is an unofficial client, not affiliated with YouTube or Google. Update it with `scoop update refryt`; the app only says when a new version is out.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gridoe/refryt/releases/download/v0.1.13/refryt-0.1.13-windows-x86_64.zip",
+            "hash": "d0eb8813b092553fd8e5cba858b729db1b9d6e30caf42306303ef280362635af"
+        },
+        "arm64": {
+            "url": "https://github.com/gridoe/refryt/releases/download/v0.1.13/refryt-0.1.13-windows-arm64.zip",
+            "hash": "ab1aa594c635b9f02fd4e34d69b2481e579a1026030db295a53c208ae0aab3d0"
+        }
+    },
+    "extract_dir": "refryt",
+    "bin": "refryt.exe",
+    "shortcuts": [
+        [
+            "refryt.exe",
+            "Refryt"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gridoe/refryt/releases/download/v$version/refryt-$version-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/gridoe/refryt/releases/download/v$version/refryt-$version-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/gridoe/refryt/releases/download/v$version/refryt-$version-SHA256SUMS.txt"
+        }
+    }
+}
